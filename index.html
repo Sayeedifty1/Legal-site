@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Solution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/61bf647dc1.js" crossorigin="anonymous"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+
+                    fontFamily: {
+                        garamond: ["EB Garamond", "serif"],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-garamond">
+    <header class="container mx-auto max-w-5xl md:mt-5">
+        <!-- nav bar section -->
+
+        <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded ">
+            <div class=" flex flex-wrap items-center justify-around">
+                <a href="" class="">
+                    <img src="images/logo2.png" class="h-6 mr-3 sm:h-9" alt="justice logo" />
+                </a>
+                <button data-collapse-toggle="navbar-default" type="button"
+                    class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul
+                        class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white items-center">
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 "
+                                aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">services
+                                <i class="fa-solid fa-chevron-right"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">cases
+                                <i class="fa-solid fa-chevron-right"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Blogs
+                                <i class="fa-solid fa-chevron-right"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Contact
+                                Us <i class="fa-solid fa-chevron-right"></i></a>
+                        </li>
+                        <li>
+                            <!-- Modal toggle -->
+                            <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
+                                class="block text-white bg-[#b68c5a] hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                type="button">
+                                Free Consult
+                            </button>
+
+                            <!-- Main modal -->
+                            <div id="authentication-modal" tabindex="-1" aria-hidden="true"
+                                class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+                                <div class="relative w-full h-full max-w-md md:h-auto">
+                                    <!-- Modal content -->
+                                    <div class="relative bg-white rounded-lg shadow">
+                                        <button type="button"
+                                            class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                                            data-modal-hide="authentication-modal">
+                                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor"
+                                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span class="sr-only">Close modal</span>
+                                        </button>
+                                        <div class="px-6 py-6 lg:px-8">
+                                            <h3 class="mb-4 text-xl font-medium text-gray-900 ">Sign in to "B7 Legal
+                                                House"
+                                            </h3>
+                                            <form class="space-y-6" action="#">
+                                                <div>
+                                                    <label for="email"
+                                                        class="block mb-2 text-sm font-medium text-gray-900 ">Your
+                                                        email</label>
+                                                    <input type="email" name="email" id="email"
+                                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                        placeholder="name@gmail.com" required>
+                                                </div>
+                                                <div>
+                                                    <label for="password"
+                                                        class="block mb-2 text-sm font-medium text-gray-900 ">Your
+                                                        password</label>
+                                                    <input type="password" name="password" id="password"
+                                                        placeholder="••••••••"
+                                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                                                        required>
+                                                </div>
+                                                <div class="flex justify-between">
+                                                    <div class="flex items-start">
+                                                        <div class="flex items-center h-5">
+                                                            <input id="remember" type="checkbox" value=""
+                                                                class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 "
+                                                                required>
+                                                        </div>
+                                                        <label for="remember"
+                                                            class="ml-2 text-sm font-medium text-gray-900 ">Remember
+                                                            me</label>
+                                                    </div>
+                                                    <a href="#" class="text-sm text-blue-700 hover:underline ">Forgot
+                                                        Password?</a>
+                                                </div>
+                                                <button type="submit"
+                                                    class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Login</button>
+                                                <div class="text-sm font-medium text-gray-500">
+                                                    Not registered? <a href="#"
+                                                        class="text-blue-700 hover:underline ">Create account</a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+        <!-- banner section  -->
+        <section class="rounded-lg w-full mt-20 bg-[url('images/banner.png')] bg-cover">
+            <div class="p-5 lg:text-center md:py-28 lg:px-56 sm:text-left">
+                <h1 class="text-5xl font-bold text-white">We Provide Effective <br> Legal Solutions</h1>
+                <p class="text-white my-6">To empower professionals to have more time to perfect their craft and expand their potentials through technology and business intelligence solutions.</p>
+                <div class="flex justify-center gap-6">
+                    <input class="bg-white md:w-2/4 rounded-lg p-4 sm:w-6/12" type="search" name="search" id=""
+                        placeholder="Search your services">
+                    <button
+                        class="block text-white bg-[#b68c5a] hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl  py-2.5 text-center px-4 md:px-8"
+                        type="button">search</button>
+                </div>
+
+            </div>
+        </section>
+    </header>
+    <main>
+        <!-- legal practice section  -->
+        <section class="container mx-auto">
+            <div class="text-center my-20">
+                <h1 class="text-4xl font-bold text-gray-800">The Legal Practice Area</h1>
+                <p class="text-gray-500 my-6">To empower professionals to have more time to perfect their craft and expand their potentials through technology and business intelligence solutions.</p>
+            </div>
+            <div class=" grid grid-cols-1 w-full md:grid-cols-3 md:w-2/3 mx-auto">
+
+                <div class="bg-white hover:bg-gradient-to-b from-gray-200 border-r border-b border-gray-200 p-16">
+                    <a href="#">
+                        <img class="mx-auto" src="images/business.png" alt="" />
+                    </a>
+                    <div class="p-5 text-center">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold text-gray-800">
+                                Business Law</h5>
+                        </a>
+                        <p class="mb-3 py-6 font-normal text-gray-700 dark:text-gray-400">business law, also called commercial law or mercantile law, the body of rules, whether by convention, agreement, or national or international legislation, governing the dealings between persons in commercial matters.</p>
+                        
+                    </div>
+                    <a href="#"><img class="mx-auto" src="images/Frame.png" alt=""></a>
+                </div>
+                <div class="bg-white hover:bg-gradient-to-b from-gray-200 border-r border-b border-gray-200 p-16">
+                    <a href="#">
+                        <img class="mx-auto" src="images/education.png" alt="" />
+                    </a>
+                    <div class="p-5 text-center">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold text-gray-800">
+                                Education Law</h5>
+                        </a>
+                        <p class="mb-3 py-6 font-normal text-gray-700 dark:text-gray-400">Making sure educational institutions meet their legal obligations to support the needs of parents, pupils and students, and to treat all fairly is what education law is all about.</p>
+                        
+                    </div>
+                    <a href="#"><img class="mx-auto mt-10" src="images/Frame.png" alt=""></a>
+                </div>
+                <div class="bg-white hover:bg-gradient-to-b from-gray-200 border-b border-gray-200 p-16">
+                    <a href="#">
+                        <img class="mx-auto" src="images/criminal.png" alt="" />
+                    </a>
+                    <div class="p-5 text-center">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold text-gray-800">
+                                Criminal Law</h5>
+                        </a>
+                        <p class="mb-3 py-6 font-normal text-gray-700">Criminal law is the body of law that relates to crime. It prescribes conduct perceived as threatening, harmful, or otherwise endangering to the property</p>
+                        
+                    </div>
+                    <a href="#"><img class="mx-auto mt-16" src="images/Frame.png" alt=""></a>
+                </div>
+                <div class="bg-white hover:bg-gradient-to-b from-gray-200 border-r border-gray-200 p-16">
+                    <a href="#">
+                        <img class="mx-auto" src="images/child.png" alt="" />
+                    </a>
+                    <div class="p-5 text-center">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold text-gray-800">
+                                Child Law</h5>
+                        </a>
+                        <p class="mb-3 py-6 font-normal text-gray-700 ">In order that every child shall not be subjected to arbitrary infringement of his honour, personal freedom and security, relevant Government departments and organizations shall provide protection and care in accordance with law</p>
+                        
+                    </div>
+                    <a href="#"><img class="mx-auto" src="images/Frame.png" alt=""></a>
+                </div>
+                <div class="bg-white hover:bg-gradient-to-b from-gray-200 border-r border-gray-200  p-16">
+                    <a href="#">
+                        <img class="mx-auto" src="images/divorce.png" alt="" />
+                    </a>
+                    <div class="p-5 text-center">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold text-gray-800">
+                                Divorce Law</h5>
+                        </a>
+                        <p class="mb-3 py-6 font-normal text-gray-700 ">In order that every child shall not be subjected to arbitrary infringement of his honour, personal freedom and security, relevant Government departments and organizations shall provide protection and care in accordance with law</p>
+                       
+                    </div>
+                    <a href="#"><img class="mx-auto" src="images/Frame.png" alt=""></a>
+                </div>
+                <div class="bg-white hover:bg-gradient-to-b from-gray-200  p-16">
+                    <a href="#">
+                        <img class="mx-auto" src="images/tax.png" alt="" />
+                    </a>
+                    <div class="p-5 text-center">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold text-gray-800">
+                                Tax Law</h5>
+                        </a>
+                        <p class="mb-3 py-6 font-normal text-gray-700">tax law, body of rules under which a public authority has a claim on taxpayers, requiring them to transfer to the authority part of their income or property. The power to impose taxes is generally recognized as a right of governments</p>
+                        
+                    </div>
+                    <a href="#"><img class="mx-auto mt-6" src="images/Frame.png" alt=""></a>
+                </div>
+
+            </div>
+        </section>
+        <!-- what our client say -->
+        <section class="container mx-auto max-w-5xl">
+            <div>
+                <div class="text-center my-20">
+                    <h1 class="text-4xl font-bold text-gray-800">What Our Client Say</h1>
+                    <p class="text-gray-500 my-6">To empower professionals to have more time to perfect their craft and expand their potentials through technology and business intelligence solutions.</p>
+                </div>
+                <div>
+
+                    <div id="default-carousel" class="relative" data-carousel="static">
+                        <!-- Carousel wrapper -->
+                        <div class="relative h-96 overflow-hidden rounded-lg md:h-96">
+                            <!-- Item 1 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <span
+                                    class="absolute text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-center">
+                                    <img class="mx-auto mb-4" src="images/client.png" alt="">
+                                    <h1 class="text-2xl font-bold mb-1">Awlad Hossain</h1>
+                                    <p class="mb-10">UIX Designer</p>
+                                    <p>Contrary to popular belief, is not simply random text. It has roots
+                                        in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                        old. Richard McClintock, .</p>
+                                </span>
+                                <img class="bg h-full w-full" src="images/slider-1.jpg"
+                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                    alt="...">
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <span
+                                    class="absolute text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-center">
+                                    <img class="mx-auto mb-4" src="images/client.png" alt="">
+                                    <h1 class="text-2xl font-bold mb-1">Awlad Hossain</h1>
+                                    <p class="mb-10">UIX Designer</p>
+                                    <p>Contrary to popular belief, is not simply random text. It has roots
+                                        in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                        old. Richard McClintock, .</p>
+                                </span>
+                                <img class="bg h-full w-full" src="images/slider-2.jpg"
+                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                    alt="...">
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <span
+                                    class="absolute text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-center">
+                                    <img class="mx-auto mb-4" src="images/client.png" alt="">
+                                    <h1 class="text-2xl font-bold mb-1">Awlad Hossain</h1>
+                                    <p class="mb-10">UIX Designer</p>
+                                    <p>Contrary to popular belief,is not simply random text. It has roots
+                                        in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                        old. Richard McClintock, .</p>
+                                </span>
+                                <img class="bg h-full w-full" src="images/slider-3.jpg"
+                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                    alt="...">
+                            </div>
+                        </div>
+                        <!-- Slider indicators -->
+                        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1"
+                                data-carousel-slide-to="0"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                                data-carousel-slide-to="1"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                                data-carousel-slide-to="2"></button>
+                        </div>
+                        <!-- Slider controls -->
+                        <button type="button"
+                            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                            data-carousel-prev>
+                            <span
+                                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                                <span class="sr-only">Previous</span>
+                            </span>
+                        </button>
+                        <button type="button"
+                            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                            data-carousel-next>
+                            <span
+                                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <span class="sr-only">Next</span>
+                            </span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- FAQ section  -->
+        <section class="container mx-auto">
+            <div class="text-center my-20">
+                <h1 class="text-4xl font-bold text-gray-800">Frequently Asked Any Questions</h1>
+                <p class="text-gray-500 my-6">To empower professionals to have more time to perfect their craft and expand their potentials through technology and business intelligence solutions.</p>
+            </div>
+            <div class="flex flex-col-reverse justify-center lg:flex-row md:flex-row ">
+                <div class="lg:w-1/3 md:w-1/3">
+                    <!-- Questions item 1 -->
+                    <div class="relative w-full overflow-hidden mx-auto mb-5">
+                        <input class="peer absolute top-0 inset-x-0 w-full h-full opacity-0 z-10 cursor-pointer"
+                            type="checkbox">
+                        <div
+                            class="peer-checked:bg-neutral-100 bg-neutral-100 w-full md:pl-5 pl-2 md:py-6 py-5 flex items-center rounded-md">
+                            <h4 class="md:text-xl text-sm font-semibold text-zinc-700 text-start">
+                                What is the difference between flexbox <br> and grid?
+                            </h4>
+                        </div>
+                        <!-- arrow icon -->
+                        <div
+                            class="absolute top-6 md:right-5 right-3 transition-transform duration-200 rotate-180 peer-checked:rotate-0">
+                            <i class="fas fa-regular fa-angle-down"></i>
+                        </div>
+
+                        <!-- content -->
+                        <div class="bg-neutral-100 overflow-hidden transition-all duration-500
+                          max-h-40 peer-checked:max-h-0">
+                            <div class="p-4">
+                                <p class="text-start text-zinc-500 text-sm md:text-base">Grid and flexbox. The basic
+                                    difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was
+                                    designed for layout in one dimension - either a row or a column. Grid was
+                                    designed for two-dimensional layout - rows, and columns at the same time.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Questions item 2 -->
+                    <div class="relative w-full overflow-hidden mx-auto mb-5">
+                        <input class="peer absolute top-0 inset-x-0 w-full h-full opacity-0 z-10 cursor-pointer"
+                            type="checkbox">
+                        <div
+                            class="peer-checked:bg-neutral-100 bg-neutral-100 w-full md:pl-5 pl-2 md:py-6 py-5 flex items-center rounded-md">
+                            <h4 class="md:text-xl text-sm font-semibold text-zinc-700 text-start">
+                                What is the difference between bootstrap <br> and tailwind CSS?
+                            </h4>
+                        </div>
+                        <!-- arrow icon -->
+                        <div
+                            class="absolute top-6 md:right-5 right-3 transition-transform duration-200 rotate-0 peer-checked:rotate-180">
+                            <i class="fas fa-regular fa-angle-down"></i>
+                        </div>
+
+                        <!-- content -->
+                        <div class="bg-neutral-100 overflow-hidden transition-all duration-500
+                          max-h-0 peer-checked:max-h-40">
+                            <div class="p-4">
+                                <p class="text-start text-zinc-500 text-sm md:text-base">Bootstrap is a
+                                    component-based framework, which means it comes with prebuilt components and
+                                    includes other utilities for layering displays, spacing, e tc. Tailwind, on the
+                                    other hand, CSS is a utility-first framework. Using Tailwind CSS is akin to
+                                    writing regular CSS. Unlike Bootstrap, it has no prebuilt components.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Questions item 3 -->
+                    <div class="relative w-full overflow-hidden mx-auto mb-5">
+                        <input class="peer absolute top-0 inset-x-0 w-full h-full opacity-0 z-10 cursor-pointer"
+                            type="checkbox">
+                        <div
+                            class="peer-checked:bg-neutral-100 bg-neutral-100 w-full md:pl-5 pl-2 md:py-6 py-5 flex items-center rounded-md">
+                            <h4 class="md:text-xl text-sm font-semibold text-zinc-700 text-start">
+                                What is the CSS box model?
+                            </h4>
+                        </div>
+                        <!-- arrow icon -->
+                        <div
+                            class="absolute top-6 md:right-5 right-3 transition-transform duration-200 rotate-0 peer-checked:rotate-180">
+                            <i class="fas fa-regular fa-angle-down"></i>
+                        </div>
+
+                        <!-- content -->
+                        <div class="bg-neutral-100 overflow-hidden transition-all duration-500
+                          max-h-0 peer-checked:max-h-40">
+                            <div class="p-4">
+                                <p class="text-start text-zinc-500 text-sm md:text-base">In CSS, the term "box
+                                    model" is used when talking about design and layout. The CSS box model is
+                                    essentially a box that wraps around every HTML element. It consists of: margins,
+                                    borders, padding, and the actual content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Questions item 4 -->
+                    <div class="relative w-full overflow-hidden mx-auto mb-5">
+                        <input class="peer absolute top-0 inset-x-0 w-full h-full opacity-0 z-10 cursor-pointer"
+                            type="checkbox">
+                        <div
+                            class="peer-checked:bg-neutral-100 bg-neutral-100 w-full md:pl-5 pl-2 md:py-6 py-5 flex items-center rounded-md">
+                            <h4 class="md:text-xl text-sm font-semibold text-zinc-700 text-start">
+                                What is the semantic tag?
+                            </h4>
+                        </div>
+                        <!-- arrow icon -->
+                        <div
+                            class="absolute top-6 md:right-5 right-3 transition-transform duration-200 rotate-0 peer-checked:rotate-180">
+                            <i class="fas fa-regular fa-angle-down"></i>
+                        </div>
+
+                        <!-- content -->
+                        <div class="bg-neutral-100 overflow-hidden transition-all duration-500
+                          max-h-0 peer-checked:max-h-40">
+                            <div class="p-4">
+                                <p class="text-start text-zinc-500 text-sm md:text-base">The semantic HTML tags help
+                                    the search engines and other user devices to determine the importance and
+                                    context of web pages. The pages made with semantic elements are much easier to
+                                    read. It has greater accessibility. It offers a better user experience.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="lg:w-1/3 md:w-1/3">
+                    <img src="images/faq.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- contact us section  -->
+        <section class="container mx-auto">
+            <div class="text-center my-20">
+                <h1 class="text-4xl font-bold text-gray-800">Contact With Us</h1>
+                <p class="text-gray-500 my-6">To empower professionals to have more time to perfect their craft and expand their potentials through technology and business intelligence solutions.</p>
+            </div>
+            <div class="md:flex justify-center gap-10">
+                <div class=" grid grid-cols-1 mb-10 w-full md:grid-cols-2 md:w-1/4 ">
+
+                    <div class="bg-zinc-100 border-r border-b border-gray-200 pt-4">
+                        <a href="#">
+                            <img class="mx-auto" src="images/location.png" alt="" />
+                        </a>
+                        <div class="p-5 text-center">
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold text-gray-800">
+                                    Address</h5>
+                            </a>
+                            <p class="mb-3 py-6 font-normal text-gray-700">A108 Adam Street, <br>
+
+                                New York, NY 535022</p>
+                        </div>
+                    </div>
+                    <div class="bg-zinc-100 border-b border-gray-200 pt-4">
+                        <a href="#">
+                            <img class="mx-auto" src="images//call.png" alt="" />
+                        </a>
+                        <div class="p-5 text-center">
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold text-gray-800">
+                                    Call</h5>
+                            </a>
+                            <p class="mb-3 py-6 font-normal text-gray-700">+88 01750 00 00 00 <br>
+                                +88 01750 00 00 00</p>
+                        </div>
+                    </div>
+                    <div class="bg-zinc-100 border-r border-gray-200 pt-4">
+                        <a href="#">
+                            <img class="mx-auto" src="images/email.png" alt="" />
+                        </a>
+                        <div class="p-5 text-center">
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold text-gray-800">
+                                    Email Us</h5>
+                            </a>
+                            <p class="mb-3 py-6 font-normal text-gray-700">info@gmail.com <br>
+                                info@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="bg-zinc-100 pt-4">
+                        <a href="#">
+                            <img class="mx-auto" src="images/time.png" alt="" />
+                        </a>
+                        <div class="p-5 text-center">
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold text-gray-800">
+                                    Working hours</h5>
+                            </a>
+                            <p class="mb-3 py-6 font-normal text-gray-700">Mon-Fri: 9AM to 5PM
+                                <br> Sunday: 9AM to 1 PM
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="text-center ml-0">
+                    <input class="bg-zinc-100 p-4 border-0 rounded-lg w-full" type="text" name="" id="" placeholder="Your Name">
+                    <br>
+                    <input class="bg-zinc-100 p-4 border-0 rounded-lg my-2 w-full" type="email" name="" id=""
+                        placeholder="Your Email"> <br>
+                    <input class="bg-zinc-100 p-4 border-0 rounded-lg w-full" type="text" name="" id="" placeholder="Subject">
+                    <br>
+                    <textarea class="bg-zinc-100 p-4 border-0 rounded-lg my-2 w-full" name="" id="" cols="40" rows="10"
+                        placeholder="Your Message"></textarea> <br>
+                    <button
+                        class="block text-white bg-[#b68c5a] hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl px-8 py-2.5 text-center w-full"
+                        type="button">Send Message</i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+    <footer class="p-10 bg-[#111111] sm:p-6 mt-20">
+        <div class="md:flex md:justify-center gap-40 p-2 md:p-10">
+            <div class="mb-6 md:mb-0">
+                <a href="#" class="flex items-center">
+                    <img src="images/logo.png" class="h-8 mr-3" alt="" />
+                </a>
+                <p class="text-sm font-semibold text-white mt-6">To empower professionals to have more time to perfect their <br> craft and expand their potentials through technology and <br> business intelligence solutions.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-6 sm:gap-10 sm:grid-cols-3">
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-white uppercase ">Useful Links</h2>
+                    <ul class="text-white ">
+                        <li>
+                            <a href="https://flowbite.com/" class="hover:underline">Home</a>
+                        </li>
+                        <li>
+                            <a href="https://tailwindcss.com/" class="hover:underline">About Us</a>
+                        </li>
+
+                        <li>
+                            <a href="https://tailwindcss.com/" class="hover:underline">Cases</a>
+                        </li>
+
+                        <li>
+                            <a href="https://tailwindcss.com/" class="hover:underline">Blogs</a>
+                        </li>
+
+                        <li>
+                            <a href="https://tailwindcss.com/" class="hover:underline">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-white uppercase ">Contact Now</h2>
+                    <ul class="text-white">
+                        <li class="mb-4 text-xs">
+                            <p>555 4th 5t NW, Washington <br>
+                                DC 20530, United States</p>
+                        </li>
+                        <li class="text-xs">
+                            <p>+88 01750 000 000 <br>
+                                +88 01750 000 000</p>
+                        </li>
+                        <li class="text-xs">
+                            <p>info@gmail.com <br>
+                                info@gmail.com</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-white uppercase ">Subscribe</h2>
+                    <ul class="text-white ">
+                        <li class="mb-4 text-xs">
+                            <p>Subscribe for our latest & Articles. We Won’t Give You Spam Mails</p>
+                        </li>
+                    </ul>
+                    <div class="flex">
+                        <input type="email" name="" id="" placeholder="Email Address " class="p-4 rounded-l-lg ">
+                        <button
+                            class="block text-white bg-[#b68c5a] hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-r-lg text-xl  py-2.5 text-center px-3 md:px-8 "
+                            type="button"><i class="fa-regular fa-paper-plane"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
+</body>
+
+</html>
